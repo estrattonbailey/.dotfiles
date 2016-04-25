@@ -1,5 +1,6 @@
-user.name=estrattonbailey
-user.email=ericstrattonbailey@gmail.com
+[user]
+  name = estrattonbailey
+  email = ericstrattonbailey@gmail.com
 
 # These have been borrowed from YADR:
 # https://github.com/skwp/dotfiles/blob/master/git/gitconfig

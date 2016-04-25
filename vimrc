@@ -15,7 +15,7 @@ set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
 let mapleader=","               "Use , as leader
 
-"This makes vim act like all other editors, buffers can
+" This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
 " http://items.sjbach.com/319/configuring-vim-right
 set hidden
@@ -64,7 +64,6 @@ set scrolloff=8         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
 
-
 "========================================
 "
 " TCP CUSTOMS
@@ -93,19 +92,18 @@ nmap <S-Enter> O<Esc>                    " Shift-CR for newline before current l
 nnoremap <C-J> <C-W><C-J>                " ----------------------------------
 nnoremap <C-K> <C-W><C-K>                " Navigate splits 
 nnoremap <C-L> <C-W><C-L>                " with CTRL-j/k/l/h
-nnoremap <C-H> <C-W><C-H>                " ----------------------------------
+nnoremap <C-H> <C-W><C-H> 
 
 "=============== Behaviour ==============
 set timeoutlen=1000 ttimeoutlen=0        " Reduce delay of ESC switching out of Insert mode (terminal Vim)
-
 
 " If you visually select something and hit paste
 " that thing gets yanked into your buffer. This
 " generally is annoying when you're copying one item
 " and repeatedly pasting it. This changes the paste
 " command in visual mode so that it doesn't overwrite
-" whatever is in your paste buffer.
-vnoremap p "_dP
+" whatever is in your paste buffer."
+vnoremap p "_dP"
 
 "=============== CtrlP ==============
 map ,js :CtrlP .<CR>
