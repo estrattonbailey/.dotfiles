@@ -1,9 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/Eric/.config/nvim'
-let g:netrw_dirhist_2='/Users/Eric/.config'
-let g:netrw_dirhist_3='/Users/Eric'
-let g:netrw_dirhist_4='/Users/Eric/.config/nvim'
-let g:netrw_dirhist_5='/Users/Eric/.config/nvim/settings'
-let g:netrw_dirhist_6='/Users/Eric/.config/nvim'
-let g:netrw_dirhist_7='/Users/ericbailey/.dotfiles'
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/ericbailey/.dotfiles/config'
+let g:netrw_dirhist_2='/Users/ericbailey/.dotfiles'
+let g:netrw_dirhist_3='/Users/ericbailey/.dotfiles/config'
+let g:netrw_dirhist_4='/Users/ericbailey/.dotfiles/config/nvim'
+let g:netrw_dirhist_5='/Users/ericbailey/.dotfiles/config/nvim/settings'

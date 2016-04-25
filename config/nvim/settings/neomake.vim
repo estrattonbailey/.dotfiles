@@ -16,7 +16,9 @@ let g:neomake_warning_sign = {
       \ }
 
 " Run Neomake on :w
-autocmd! BufWritePost * Neomake
+" 
+" Commented out 4/25/16 - causing errors
+" autocmd! BufWritePost * Neomake
 
 " ---------- JAVASCRIPT MAKERS ----------
 
