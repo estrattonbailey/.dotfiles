@@ -8,6 +8,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'Raimondi/delimitMate'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'terryma/vim-multiple-cursors'
 Plug 'Valloric/ListToggle'
 "Plug 'pangloss/vim-javascript'
 Plug 'gavocanov/vim-js-indent'          " Indenting from pangloss/vim-javascript
