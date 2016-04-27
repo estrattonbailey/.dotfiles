@@ -1,4 +1,4 @@
-source ~/.vimrc
+source ~/.dotfiles/vimrc
 
 " VIM-PLUG (plugins)
 call plug#begin('~/.config/nvim/plugged')

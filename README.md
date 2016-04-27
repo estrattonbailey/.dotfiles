@@ -20,8 +20,9 @@ brew install neovim/neovim/neovim
 ```bash
 ln -s ~/.dotfiles/config/nvim ~/.config/nvim
 ln -s ~/.dotfiles/vimrc/ ~/.vimrc
-ln -s ~/.dotfiles/nvimrc/ ~/.nvimrc
+ln -s ~/.dotfiles/config/nvim/init.vim/ ~/.nvimrc
 ln -s ~/.dotfiles/gitconfig ~/.gitconfig
+ln -s ~/.dotfiles/gitignore_global ~/.gitignore_global
 ```
 
 4. Install plugins:
