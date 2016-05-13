@@ -1,8 +1,13 @@
 source ~/.dotfiles/vimrc
 
+" From Deoplete docs
+function! DoRemote(arg)
+  UpdateRemotePlugins
+endfunction
+
 " VIM-PLUG (plugins)
 call plug#begin('~/.config/nvim/plugged')
-Plug 'benekastah/neomake'
+Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'tpope/vim-fugitive'
 Plug 'Raimondi/delimitMate'
@@ -11,10 +16,11 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'Valloric/ListToggle'
-"Plug 'pangloss/vim-javascript'
+Plug 'bling/vim-airline'
 Plug 'gavocanov/vim-js-indent'          " Indenting from pangloss/vim-javascript
 Plug 'othree/yajs.vim'                  " Better syntax highlighting than ^^
 Plug 'mxw/vim-jsx'
+Plug 'elzr/vim-json'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'ternjs/tern_for_vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -69,3 +75,6 @@ endif
 " LOAD SETTINGS
 " (Keymaps and plugin settings)
 so ~/.config/nvim/settings.vim
+
+" Deoplete
+let g:deoplete#enable_at_startup = 1
