@@ -123,6 +123,7 @@
   autocrlf = false
   excludesfile = ~/.gitignore_global
   editor = nvim
+  filemode = false
 [advice]
   statusHints = false
 [diff]
