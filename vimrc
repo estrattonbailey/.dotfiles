@@ -106,7 +106,9 @@ set timeoutlen=1000 ttimeoutlen=0        " Reduce delay of ESC switching out of 
 vnoremap p "_dP"
 
 "=============== CtrlP ==============
-map ,js :CtrlP .<CR>
+map ,js :CtrlP src<CR>
+map ,jd :CtrlP dist<CR>
+map ,jr :CtrlP .<CR>
 let g:ctrlp_custom_ignore = '/node_modules/'
 
 "=============== Multi-select ==============
