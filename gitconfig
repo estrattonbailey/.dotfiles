@@ -39,6 +39,7 @@
   ci = commit                       # commit
   amend = commit --amend            # ammend your last commit
   ammend = commit --amend           # ammend your last commit
+  oops = commit --amend --no-edit # ammend last without editing message
 
   # checkout
   co = checkout                     # checkout
@@ -99,7 +100,7 @@
   svnl = svn log --oneline --show-commit
 
   # util
-  oops = commit --amend
+  grog = log --graph --abbrev-commit --decorate --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)'
 [format]
   pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
 [mergetool]
