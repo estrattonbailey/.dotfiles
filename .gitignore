@@ -1,4 +1,5 @@
-config/nvim/undodir
-config/nvim/plugged
+vim/undodir
+vim/plugged
+vim/undodir
 .netrwhist
-config/nvim/.netrwhist
+vim/.netrwhist
