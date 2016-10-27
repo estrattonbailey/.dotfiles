@@ -59,8 +59,8 @@ set showcmd
 " Disable cursor blink
 set gcr=a:blinkon0
 " No sounds
-set visualbell
-set noerrorbells
+" set visualbell
+" set noerrorbells
 " Reload files changed outside vim
 set autoread
 " Indentation
@@ -87,8 +87,6 @@ set ruler
 set encoding=utf-8
 " Always show the status bar
 set laststatus=2
-" Always use system clipboard instead of +/* registers
-set clipboard+=unnamedplus
 " Enable bold fonts
 let g:enable_bold_font = 1
 if has('persistent_undo')
@@ -138,7 +136,9 @@ set timeoutlen=1000 ttimeoutlen=0
 " and repeatedly pasting it. This changes the paste
 " command in visual mode so that it doesn't overwrite
 " whatever is in your paste buffer."
-vnoremap p "_dP"
+vnoremap p "_dP
+" Always use system clipboard instead of +/* registers
+set clipboard=unnamed
 
 "
 "

@@ -1,38 +1,62 @@
 # Dotfiles
-Config files for Vim, Neovim, and git, copied from [Cole Peters'](https://twitter.com/cole_peters) lovely [repo](https://github.com/colepeters/dotfiles/tree/b25bb993c1baa491aa8cd7858962a80104bd39fe). I just took what I needed and left the rest :)
+Configs for vim, git, and [Hyper](https://hyper.is/). Almost all of these settings were borrowed from [@colepeters](https://github.com/colepeters), [@mrmrs](https://github.com/mrmrs), and based on Cole's comments, the [YADR](https://github.com/skwp/dotfiles) dotfiles library.
 
-Note: Cole set up the `,` as the `<leader>`, and I generally like that as well so I kept it.
+This config assumes you use Hyper as your main terminal, and allows the configured [Hyper Atom Dark theme](https://github.com/mdo/hyperterm-atom-dark) to style vim as well as the termnal.
 
-## Setup
-
-1. Clone this repo:
+## Install
+1. Clone this repo to a directory in your root.
 ```bash
 git clone git@github.com:estrattonbailey/.dotfiles.git ~/.dotfiles
 ```
 
-2. Install Neovim if you haven't already:
+2. Install or update vim. Autocompletion requires that it be installed with Lua.
 ```bash
-brew update # update homebrew if needed
-brew install neovim/neovim/neovim
+brew install vim --with-lua
+brew upgrade vim
 ```
 
-3. Symlink all the things:
+3. Create symlinks:
 ```bash
-ln -s ~/.dotfiles/config/nvim ~/.config/nvim
 ln -s ~/.dotfiles/vimrc/ ~/.vimrc
-ln -s ~/.dotfiles/config/nvim/init.vim/ ~/.nvimrc
 ln -s ~/.dotfiles/gitconfig ~/.gitconfig
 ln -s ~/.dotfiles/gitignore_global ~/.gitignore_global
+ln -s ~/.dotfiles/hyper.js ~/.hyper.js
 ```
 
 4. Install plugins:
 ```bash
-nvim +PlugInstall +qa
+vim +PlugInstall +qa
 ```
 
 5. Use Neovim:
 ```bash
-nvim <filename>
+vim <filename>
 ```
+
+## Usage
+- `,` - LEADER 
+- `h` - move left
+- `j` - move down
+- `k` - move up
+- `l` - move right
+- `i` - enter insert mode
+- `a` - move to next character and enter insert mode
+- `A` - go to end of line in insert mode
+- `v` - enter visual selection mode
+- `V` - select whole line 
+- `e` - go to end of next word
+- `b` - go to beginning of last word
+- `$` - go to end of line
+- `0` - go to beginning of line
+- `o` - add line above
+- `O` - add line below
+- `H` - go to top of window
+- `L` - go to bottom of window
+- `y` - copy to system clipboard
+- `p` - paste from system clipboard
+- `u` - undo
+- `Ctrl+r` - redo
+- `/` - begin search
+- `//` - clear last search
 
 MIT License
