@@ -8,6 +8,7 @@
 call plug#begin('~/.dotfiles/vim/plugged')
 Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'altercation/vim-colors-solarized'
+Plug 'joshdick/onedark.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'Raimondi/delimitMate'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -120,7 +121,7 @@ set scrolloff=8
 set sidescrolloff=15
 set sidescroll=1
 " Appearance
-colorscheme hybrid_material 
+colorscheme onedark 
 set background=dark
 set noshowmode
 set guioptions=gm
