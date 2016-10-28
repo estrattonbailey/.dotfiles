@@ -1,8 +1,6 @@
 # Dotfiles
 Configs for vim, git, and [Hyper](https://hyper.is/). Almost all of these settings were borrowed from [@colepeters](https://github.com/colepeters), [@mrmrs](https://github.com/mrmrs), and based on Cole's comments, the [YADR](https://github.com/skwp/dotfiles) dotfiles library.
 
-This config assumes you use Hyper as your main terminal, and allows the configured [Hyper Atom Dark theme](https://github.com/mdo/hyperterm-atom-dark) to style vim as well as the termnal.
-
 ## Install
 1. Clone this repo to a directory in your root.
 ```bash
