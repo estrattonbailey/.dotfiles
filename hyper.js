@@ -1,5 +1,7 @@
 module.exports = {
   config: {
+    bell: false,
+
     // default font size in pixels for all tabs
     fontSize: 12,
 
@@ -57,7 +59,8 @@ module.exports = {
   //   `project#1.0.1`
   plugins: [
     'hyperterm-atom-dark',
-    'hypercwd'
+    'hypercwd',
+    'hyperterm-title'
   ],
 
   // in development, you can create a directory under

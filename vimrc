@@ -7,6 +7,7 @@
 "
 call plug#begin('~/.dotfiles/vim/plugged')
 Plug 'kristijanhusak/vim-hybrid-material'
+Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-fugitive'
 Plug 'Raimondi/delimitMate'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -22,7 +23,6 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'ternjs/tern_for_vim'
 Plug 'Shougo/neocomplete.vim'
 Plug 'mhinz/vim-grepper'
-Plug 'altercation/vim-colors-solarized'
 call plug#end()
 
 "
@@ -59,8 +59,8 @@ set showcmd
 " Disable cursor blink
 set gcr=a:blinkon0
 " No sounds
-" set visualbell
-" set noerrorbells
+set visualbell
+set noerrorbells
 " Reload files changed outside vim
 set autoread
 " Indentation
@@ -120,7 +120,7 @@ set scrolloff=8
 set sidescrolloff=15
 set sidescroll=1
 " Appearance
-" colorscheme solarized
+colorscheme hybrid_material 
 set background=dark
 set noshowmode
 set guioptions=gm
@@ -231,4 +231,4 @@ nnoremap <leader>fi :Grepper -noquickfix -open -switch -tool git <CR>
 "
 "
 "
-map reload :so ~/.vimrc<CR> 
+map rr :so ~/.vimrc<CR> 
