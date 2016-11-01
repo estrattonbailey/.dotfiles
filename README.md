@@ -1,6 +1,8 @@
 # Dotfiles
 Configs for vim, git, and [Hyper](https://hyper.is/). Almost all of these settings were borrowed from [@colepeters](https://github.com/colepeters), [@mrmrs](https://github.com/mrmrs), and based on Cole's comments, the [YADR](https://github.com/skwp/dotfiles) dotfiles library.
 
+I also recommend a matching terminal theme [like this one](https://github.com/nathanbuchar/atom-one-dark-terminal).
+
 ## Install
 1. Clone this repo to a directory in your root.
 ```bash
@@ -21,12 +23,19 @@ ln -s ~/.dotfiles/gitignore_global ~/.gitignore_global
 ln -s ~/.dotfiles/hyper.js ~/.hyper.js
 ```
 
-4. Install plugins:
+4. Install Vim Plug:
+For more info, check out [the repo](https://github.com/junegunn/vim-plug), otherwise just use the CURL below.
+```bash
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+5. Install plugins:
 ```bash
 vim +PlugInstall +qa
 ```
 
-5. Use Neovim:
+6. Use it:
 ```bash
 vim <filename>
 ```
