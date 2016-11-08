@@ -222,6 +222,14 @@ let delimitMate_expand_space = 1
 " (Mnemonic 'find in (files)')
 nnoremap <leader>fi :Grepper -noquickfix -open -switch -tool git <CR>
 
+" Fix multi-cursor + newcomplete
+function! Multiple_cursors_before()
+  exe 'NeoCompleteLock'
+endfunction
+function! Multiple_cursors_after()
+  exe 'NeoCompleteUnlock'
+endfunction
+
 " Source a settings file 
 " so ~/.dotfiles/vim/settings.vim
 
