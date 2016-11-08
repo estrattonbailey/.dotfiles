@@ -232,12 +232,3 @@ endfunction
 
 " Source a settings file 
 " so ~/.dotfiles/vim/settings.vim
-
-"
-"
-"
-" UTILS
-"
-"
-"
-map rr :so ~/.vimrc<CR> 
