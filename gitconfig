@@ -70,6 +70,9 @@
   rc = rebase --continue            # continue rebase
   rs = rebase --skip                # skip rebase
 
+  # pull --rebase
+  got = pull --rebase origin master
+
   # remote
   r = remote -v                     # show remotes (verbose)
 

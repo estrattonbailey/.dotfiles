@@ -24,6 +24,10 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'ternjs/tern_for_vim'
 Plug 'Shougo/neocomplete.vim'
 Plug 'mhinz/vim-grepper'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'alexlafroscia/postcss-syntax.vim'
+Plug 'leafgarland/typescript-vim'
 call plug#end()
 
 "
@@ -201,9 +205,11 @@ nnoremap tm  :tabm<CR>
 "
 "
 " CtrlP Fuzzy Finder
+map ,jr :CtrlP .<CR>
 map ,js :CtrlP src<CR>
 map ,jd :CtrlP dist<CR>
-map ,jr :CtrlP .<CR>
+map ,ja :CtrlP app<CR>
+map ,jw :CtrlP server<CR>
 let g:ctrlp_custom_ignore = '/node_modules/'
 
 " Multi-select
