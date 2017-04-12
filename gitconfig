@@ -126,7 +126,7 @@
 [core]
   autocrlf = false
   excludesfile = ~/.gitignore_global
-  editor = nvim
+  editor = vim
   filemode = false
 [advice]
   statusHints = false

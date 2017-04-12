@@ -97,7 +97,7 @@ let g:enable_bold_font = 1
 if has('persistent_undo')
   " Save undos after file closes
   set undofile                          
-  " Save undos in undodir within nvim dir
+  " Save undos in undodir within vim dir
   set undodir=~/.dotfiles/vim/undodir    
 endif
 " This makes vim act like all other editors, buffers can

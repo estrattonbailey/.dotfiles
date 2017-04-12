@@ -35,6 +35,8 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 vim +PlugInstall +qa
 ```
 
+**5.1** For Tern, you'll need to `cd` into `~/.dotfiles/vim/plugged/tern_for_vim` and run `npm install` for that to run.
+
 6. Use it:
 ```bash
 vim <filename>
@@ -59,10 +61,23 @@ vim <filename>
 - `O` - add line below
 - `H` - go to top of window
 - `L` - go to bottom of window
+- `Ctrl+d` - move down by half a window
+- `Ctrl+u` - move up by half a window
 - `y` - copy to system clipboard
 - `p` - paste from system clipboard
 - `u` - undo
 - `Ctrl+r` - redo
+- `dd` - delete whole line
+- `x` - delete character under cursor
+- `r` - replace character under cursor i.e. press `r` then press the char you want to insert
+- `viw` - with cursor over word, select the entire word in visual mode
+- `vit` - with cursor over tag, select the contents of the tag in visual mode
+- `diw` - with cursor over word, select and delete the entire word
+- `dit` - with cursor over tag, select and delete the contents of the tag
+- `ciw` - with cursor over word, select and delete the entire word, then enter insert mode
+- `cit` - with cursor over tag, select and delete the contents of the tag, then enter insert mode
+- `gc` - comment out multiple lines, with multiple lines selected in visual mode
+- `gcc` - comment out single line from normal mode
 - `/` - begin search
 - `//` - clear last search
 
