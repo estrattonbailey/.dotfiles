@@ -9,6 +9,7 @@ call plug#begin('~/.dotfiles/vim/plugged')
 Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'altercation/vim-colors-solarized'
 Plug 'joshdick/onedark.vim'
+Plug 'rakr/vim-one'
 Plug 'tpope/vim-fugitive'
 Plug 'Raimondi/delimitMate'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -125,8 +126,8 @@ set scrolloff=8
 set sidescrolloff=15
 set sidescroll=1
 " Appearance
-colorscheme onedark 
-set background=dark
+colorscheme one
+set background=light
 set noshowmode
 set guioptions=gm
 " Syntax
@@ -205,12 +206,13 @@ nnoremap tm  :tabm<CR>
 "
 "
 " CtrlP Fuzzy Finder
+let g:ctrlp_custom_ignore = '/node_modules/'
 map ,jr :CtrlP .<CR>
 map ,js :CtrlP src<CR>
+map ,jc :CtrlP client<CR>
 map ,jd :CtrlP dist<CR>
 map ,ja :CtrlP app<CR>
 map ,jw :CtrlP server<CR>
-let g:ctrlp_custom_ignore = '/node_modules/'
 
 " Multi-select
 let g:multi_cursor_next_key='<C-n>'
