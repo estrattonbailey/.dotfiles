@@ -29,6 +29,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'alexlafroscia/postcss-syntax.vim'
 Plug 'leafgarland/typescript-vim'
+Plug 'ajmwagar/vim-deus'
 call plug#end()
 
 "
@@ -125,9 +126,22 @@ set nofoldenable
 set scrolloff=8
 set sidescrolloff=15
 set sidescroll=1
-" Appearance
-colorscheme one
-set background=light
+
+"
+"
+"
+"
+" Colors
+"
+"
+"
+" colorscheme one
+" set background=light
+"
+" @see https://github.com/ajmwagar/vim-deus
+colorscheme deus
+set background=dark
+
 set noshowmode
 set guioptions=gm
 " Syntax
