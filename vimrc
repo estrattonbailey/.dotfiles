@@ -66,7 +66,7 @@ set showcmd
 " Disable cursor blink
 set gcr=a:blinkon0
 " No sounds
-set visualbell
+set novisualbell
 set noerrorbells
 " Reload files changed outside vim
 set autoread
