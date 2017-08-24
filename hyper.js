@@ -21,7 +21,9 @@ module.exports = {
     borderColor: '#333',
 
     // custom css to embed in the main window
-    css: '',
+    css: `
+      body { background-color: rgb(40, 44, 52) }
+    `,
 
     // custom css to embed in the terminal window
     termCSS: '',
@@ -52,9 +54,9 @@ module.exports = {
   },
 
   plugins: [
-    'hyper-one-dark',
+    'hyperterm-atom-dark',
+    // 'hyper-chesterish',
     'hypercwd',
-    'hyperminimal',
   ],
 
   // in development, you can create a directory under
