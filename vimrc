@@ -139,7 +139,14 @@ set sidescroll=1
 " set background=light
 "
 " @see https://github.com/ajmwagar/vim-deus
-colorscheme deus
+" colorscheme deus
+"
+" @see https://github.com/joshdick/onedark.vim#customizing-onedarkvims-look-without-forking-the-repository
+if (has("autocmd") && !has("gui_running"))
+  let s:white = { "gui": "#ABB2BF", "cterm": "145", "cterm16" : "7" }
+  autocmd ColorScheme * call onedark#set_highlight("Normal", { "fg": s:white }) " No `bg` setting
+end
+colorscheme onedark
 set background=dark
 
 set noshowmode
