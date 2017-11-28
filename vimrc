@@ -6,30 +6,33 @@
 "
 "
 call plug#begin('~/.dotfiles/vim/plugged')
-Plug 'kristijanhusak/vim-hybrid-material'
-Plug 'altercation/vim-colors-solarized'
+" Plug 'kristijanhusak/vim-hybrid-material'
+" Plug 'altercation/vim-colors-solarized'
+" Plug 'rakr/vim-one'
+" Plug 'ajmwagar/vim-deus'
 Plug 'joshdick/onedark.vim'
-Plug 'rakr/vim-one'
 Plug 'tpope/vim-fugitive'
 Plug 'Raimondi/delimitMate'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-liquid'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'bling/vim-airline'
-Plug 'othree/yajs.vim'
-Plug 'mxw/vim-jsx'
-Plug 'elzr/vim-json'
-Plug 'mustache/vim-mustache-handlebars'
+" Plug 'othree/yajs.vim'
+" Plug 'elzr/vim-json'
+" Plug 'mustache/vim-mustache-handlebars'
+Plug 'editorconfig/editorconfig-vim'
 Plug 'ternjs/tern_for_vim'
 Plug 'Shougo/neocomplete.vim'
-Plug 'mhinz/vim-grepper'
-Plug 'editorconfig/editorconfig-vim'
+Plug 'jparise/vim-graphql'
+Plug 'mxw/vim-jsx'
+Plug 'tpope/vim-liquid'
 Plug 'pangloss/vim-javascript'
-Plug 'alexlafroscia/postcss-syntax.vim'
-Plug 'leafgarland/typescript-vim'
-Plug 'ajmwagar/vim-deus'
+Plug 'hail2u/vim-css3-syntax'
+" Plug 'alexlafroscia/postcss-syntax.vim'
+Plug 'styled-components/vim-styled-components', { 'branch': 'rewrite' }
+" Plug 'w0rp/ale'
+Plug 'Quramy/vim-js-pretty-template'
 call plug#end()
 
 "
@@ -246,18 +249,18 @@ let delimitMate_offByDefault = 0
 let delimitMate_expand_cr = 1
 let delimitMate_expand_space = 1
 
-" Settings for vim-grepper
-" Set ,fi to Grepper w/ open/focused loclist
-" (Mnemonic 'find in (files)')
-nnoremap <leader>fi :Grepper -noquickfix -open -switch -tool git <CR>
-
-" Fix multi-cursor + newcomplete
+" Fix multi-cursor + neocomplete
 function! Multiple_cursors_before()
   exe 'NeoCompleteLock'
 endfunction
 function! Multiple_cursors_after()
   exe 'NeoCompleteUnlock'
 endfunction
+
+" Register tag name associated the filetype
+call jspretmpl#register_tag('gql', 'graphql')
+" template literals to HTML
+map :lit :JsPreTmpl html
 
 " Source a settings file 
 " so ~/.dotfiles/vim/settings.vim

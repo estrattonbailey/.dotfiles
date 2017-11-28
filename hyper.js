@@ -55,7 +55,8 @@ module.exports = {
 
   plugins: [
     'hyperterm-atom-dark',
-    // 'hyper-chesterish',
+    'hypertitle',
+    'hyperterm-tabs',
     'hypercwd',
   ],
 
