@@ -14,24 +14,25 @@ Plug 'joshdick/onedark.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'Raimondi/delimitMate'
 Plug 'ctrlpvim/ctrlp.vim'
+" see https://github.com/junegunn/fzf.vim
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'bling/vim-airline'
 " Plug 'othree/yajs.vim'
 " Plug 'elzr/vim-json'
-" Plug 'mustache/vim-mustache-handlebars'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'ternjs/tern_for_vim'
+" Plug 'ternjs/tern_for_vim'
 Plug 'Shougo/neocomplete.vim'
 Plug 'jparise/vim-graphql'
 Plug 'mxw/vim-jsx'
 Plug 'tpope/vim-liquid'
 Plug 'pangloss/vim-javascript'
-Plug 'hail2u/vim-css3-syntax'
-" Plug 'alexlafroscia/postcss-syntax.vim'
+" Plug 'hail2u/vim-css3-syntax'
+Plug 'alexlafroscia/postcss-syntax.vim'
 Plug 'styled-components/vim-styled-components', { 'branch': 'rewrite' }
-" Plug 'w0rp/ale'
+Plug 'w0rp/ale'
 Plug 'Quramy/vim-js-pretty-template'
 call plug#end()
 
@@ -261,6 +262,15 @@ endfunction
 call jspretmpl#register_tag('gql', 'graphql')
 " template literals to HTML
 map :lit :JsPreTmpl html
+
+" Configure ale (linting)
+let g:ale_sign_column_always = 1
+let g:ale_sign_error = '💩'
+let g:ale_sign_warning = '👉'
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_linters = {
+  \'javascript': ['standard']
+\}
 
 " Source a settings file 
 " so ~/.dotfiles/vim/settings.vim
