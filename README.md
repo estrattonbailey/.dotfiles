@@ -81,4 +81,18 @@ vim <filename>
 - `/` - begin search
 - `//` - clear last search
 
+## Spacemacs
+Giving this a try.
+```bash
+brew upgrade
+brew install emacs
+git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+```
+
+Then run `emacs` in terminal to start the setup. I've configured `evil`, `ivy` and `spacemacs` defaults.
+
+You'll want to follow the javascript install [instructions](https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Blang/javascript#install).
+
+Full [docs](http://spacemacs.org/doc/DOCUMENTATION.html).
+
 MIT License
