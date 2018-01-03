@@ -32,7 +32,7 @@ Plug 'pangloss/vim-javascript'
 " Plug 'hail2u/vim-css3-syntax'
 Plug 'alexlafroscia/postcss-syntax.vim'
 Plug 'styled-components/vim-styled-components', { 'branch': 'rewrite' }
-Plug 'w0rp/ale'
+" Plug 'w0rp/ale'
 Plug 'Quramy/vim-js-pretty-template'
 call plug#end()
 
