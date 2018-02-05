@@ -11,29 +11,24 @@ call plug#begin('~/.dotfiles/vim/plugged')
 " Plug 'rakr/vim-one'
 " Plug 'ajmwagar/vim-deus'
 Plug 'joshdick/onedark.vim'
-Plug 'tpope/vim-fugitive'
-Plug 'Raimondi/delimitMate'
-Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'tpope/vim-fugitive'
+" Plug 'Raimondi/delimitMate'
+" Plug 'ctrlpvim/ctrlp.vim'
 " see https://github.com/junegunn/fzf.vim
-" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-" Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-surround'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'bling/vim-airline'
+" Plug 'bling/vim-airline'
 " Plug 'othree/yajs.vim'
 " Plug 'elzr/vim-json'
 " Plug 'ternjs/tern_for_vim'
-Plug 'Shougo/neocomplete.vim'
-Plug 'jparise/vim-graphql'
+" Plug 'Shougo/neocomplete.vim'
+" Plug 'jparise/vim-graphql'
 Plug 'mxw/vim-jsx'
-Plug 'tpope/vim-liquid'
-Plug 'pangloss/vim-javascript'
+" Plug 'tpope/vim-liquid'
+" Plug 'pangloss/vim-javascript'
 " Plug 'hail2u/vim-css3-syntax'
 Plug 'alexlafroscia/postcss-syntax.vim'
-Plug 'styled-components/vim-styled-components', { 'branch': 'rewrite' }
-" Plug 'w0rp/ale'
-Plug 'Quramy/vim-js-pretty-template'
 call plug#end()
 
 "
@@ -174,29 +169,6 @@ set clipboard=unnamed
 "
 "
 "
-" COMPLETION 
-"
-"
-"
-let g:neocomplete#enable_at_startup = 1
-set wildmode=list:longest
-" Enable ctrl-n and ctrl-p to scroll thru matches
-set wildmenu
-" Stuff to ignore when tab completing
-set wildignore=*.o,*.obj,*~
-set wildignore+=*vim/backups*
-set wildignore+=*sass-cache*
-set wildignore+=*DS_Store*
-set wildignore+=vendor/rails/**
-set wildignore+=vendor/cache/**
-set wildignore+=*.gem
-set wildignore+=log/**
-set wildignore+=tmp/**
-set wildignore+=*.png,*.jpg,*.gif
-
-"
-"
-"
 " MOVEMENT
 "
 "
@@ -222,55 +194,3 @@ nnoremap tk  :tabprev<CR>
 nnoremap tl  :tablast<CR>
 nnoremap tn  :tabnew<CR>
 nnoremap tm  :tabm<CR>
-
-"
-"
-"
-" SETTINGS
-"
-"
-"
-" CtrlP Fuzzy Finder
-let g:ctrlp_custom_ignore = '/node_modules/'
-map ,jr :CtrlP .<CR>
-map ,js :CtrlP src<CR>
-map ,jc :CtrlP client<CR>
-map ,jd :CtrlP dist<CR>
-map ,ja :CtrlP app<CR>
-map ,jw :CtrlP server<CR>
-
-" Multi-select
-let g:multi_cursor_next_key='<C-n>'
-let g:multi_cursor_prev_key='<C-p>'
-let g:multi_cursor_skip_key='<C-x>'
-
-let delimitMate_offByDefault = 0
-" Hitting <CR> or space w/in parens will expand
-" to balance spaces or newlines
-let delimitMate_expand_cr = 1
-let delimitMate_expand_space = 1
-
-" Fix multi-cursor + neocomplete
-function! Multiple_cursors_before()
-  exe 'NeoCompleteLock'
-endfunction
-function! Multiple_cursors_after()
-  exe 'NeoCompleteUnlock'
-endfunction
-
-" Register tag name associated the filetype
-call jspretmpl#register_tag('gql', 'graphql')
-" template literals to HTML
-map :lit :JsPreTmpl html
-
-" Configure ale (linting)
-let g:ale_sign_column_always = 1
-let g:ale_sign_error = '💩'
-let g:ale_sign_warning = '👉'
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_linters = {
-  \'javascript': ['standard']
-\}
-
-" Source a settings file 
-" so ~/.dotfiles/vim/settings.vim
