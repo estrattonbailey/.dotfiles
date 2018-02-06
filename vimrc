@@ -10,7 +10,8 @@ call plug#begin('~/.dotfiles/vim/plugged')
 " Plug 'altercation/vim-colors-solarized'
 " Plug 'rakr/vim-one'
 " Plug 'ajmwagar/vim-deus'
-Plug 'joshdick/onedark.vim'
+" Plug 'joshdick/onedark.vim'
+Plug 'arcticicestudio/nord-vim'
 " Plug 'tpope/vim-fugitive'
 " Plug 'Raimondi/delimitMate'
 " Plug 'ctrlpvim/ctrlp.vim'
@@ -23,10 +24,11 @@ Plug 'tpope/vim-commentary'
 " Plug 'elzr/vim-json'
 " Plug 'ternjs/tern_for_vim'
 " Plug 'Shougo/neocomplete.vim'
+" Plug 'davidhalter/jedi-vim'
 " Plug 'jparise/vim-graphql'
 Plug 'mxw/vim-jsx'
 " Plug 'tpope/vim-liquid'
-" Plug 'pangloss/vim-javascript'
+Plug 'pangloss/vim-javascript'
 " Plug 'hail2u/vim-css3-syntax'
 Plug 'alexlafroscia/postcss-syntax.vim'
 call plug#end()
@@ -141,11 +143,11 @@ set sidescroll=1
 " colorscheme deus
 "
 " @see https://github.com/joshdick/onedark.vim#customizing-onedarkvims-look-without-forking-the-repository
-if (has("autocmd") && !has("gui_running"))
-  let s:white = { "gui": "#ABB2BF", "cterm": "145", "cterm16" : "7" }
-  autocmd ColorScheme * call onedark#set_highlight("Normal", { "fg": s:white }) " No `bg` setting
-end
-colorscheme onedark
+" if (has("autocmd") && !has("gui_running"))
+"   let s:white = { "gui": "#ABB2BF", "cterm": "145", "cterm16" : "7" }
+"   autocmd ColorScheme * call onedark#set_highlight("Normal", { "fg": s:white }) " No `bg` setting
+" end
+colorscheme nord
 set background=dark
 
 set noshowmode
