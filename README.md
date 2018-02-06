@@ -1,7 +1,5 @@
 # Dotfiles
-Configs for vim, git, and [Hyper](https://hyper.is/). Almost all of these settings were borrowed from [@colepeters](https://github.com/colepeters), [@mrmrs](https://github.com/mrmrs), and based on Cole's comments, the [YADR](https://github.com/skwp/dotfiles) dotfiles library.
-
-I also recommend a matching terminal theme [like this one](https://github.com/nathanbuchar/atom-one-dark-terminal).
+Configs for vim, git, tmux and Alacritty.
 
 ## Install
 1. Clone this repo to a directory in your root.
@@ -9,10 +7,28 @@ I also recommend a matching terminal theme [like this one](https://github.com/na
 git clone git@github.com:estrattonbailey/.dotfiles.git ~/.dotfiles
 ```
 
-2. Install or update vim. Autocompletion requires that it be installed with Lua.
+2. Install or update vim. Autocompletion requires that it be installed with Lua, and that's optional of course.
 ```bash
 brew install vim --with-lua
 brew upgrade vim
+```
+
+3. Install Alacritty
+```
+# clone and init
+git clone https://github.com/jwilm/alacritty.git
+cd alacritty
+rustup override set stable
+rustup update stable
+
+# compile rust
+cargo build --release
+
+# package for applications
+make app
+
+# copy to applications folder
+cp -r target/release/osx/Alacritty.app /Applications/
 ```
 
 3. Create symlinks:
@@ -20,7 +36,9 @@ brew upgrade vim
 ln -s ~/.dotfiles/vimrc ~/.vimrc
 ln -s ~/.dotfiles/gitconfig ~/.gitconfig
 ln -s ~/.dotfiles/gitignore_global ~/.gitignore_global
-ln -s ~/.dotfiles/hyper.js ~/.hyper.js
+# remove the installed config and symlink this one
+rm ~/.config/alacritty/alacritty.yml && ln -s ~/.dotfiles/alacritty.yml ~/.config/alacritty/alacritty.yml
+ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
 ```
 
 4. Install Vim Plug:
@@ -81,18 +99,10 @@ vim <filename>
 - `/` - begin search
 - `//` - clear last search
 
-## Spacemacs
-Giving this a try.
-```bash
-brew upgrade
-brew install emacs
-git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
-```
-
-Then run `emacs` in terminal to start the setup. I've configured `evil`, `ivy` and `spacemacs` defaults.
-
-You'll want to follow the javascript install [instructions](https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Blang/javascript#install).
-
-Full [docs](http://spacemacs.org/doc/DOCUMENTATION.html).
+## tmux
+Notable changes:
+- uses `C-a` as prefix
+- uses pane splitting shortcuts similar to vim
+*See `tmux.conf` for these, there's only a few overrides.*
 
 MIT License
