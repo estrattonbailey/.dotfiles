@@ -1,53 +1,27 @@
 "
-"
-"
-" PLUGINS (vim-plug)
-"
-"
+" plugins
 "
 call plug#begin('~/.dotfiles/vim/plugged')
-" Plug 'kristijanhusak/vim-hybrid-material'
-" Plug 'altercation/vim-colors-solarized'
-" Plug 'rakr/vim-one'
-" Plug 'ajmwagar/vim-deus'
-" Plug 'joshdick/onedark.vim'
 Plug 'arcticicestudio/nord-vim'
-" Plug 'tpope/vim-fugitive'
-" Plug 'Raimondi/delimitMate'
-" Plug 'ctrlpvim/ctrlp.vim'
-" see https://github.com/junegunn/fzf.vim
+Plug 'rakr/vim-one'
+Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
-" Plug 'bling/vim-airline'
-" Plug 'othree/yajs.vim'
-" Plug 'elzr/vim-json'
-" Plug 'ternjs/tern_for_vim'
-" Plug 'Shougo/neocomplete.vim'
-" Plug 'davidhalter/jedi-vim'
-" Plug 'jparise/vim-graphql'
+Plug 'elzr/vim-json'
 Plug 'mxw/vim-jsx'
-" Plug 'tpope/vim-liquid'
+Plug 'tpope/vim-liquid'
 Plug 'pangloss/vim-javascript'
-" Plug 'hail2u/vim-css3-syntax'
 Plug 'alexlafroscia/postcss-syntax.vim'
 call plug#end()
 
 "
-"
-"
-" LEADER
-"
-"
+" leader
 "
 let mapleader=","
 
 "
-"
-"
-" BASIC
-"
-"
+" basic
 "
 " Use Vim settings instead of vi settings
 set nocompatible
@@ -129,51 +103,30 @@ set sidescrolloff=15
 set sidescroll=1
 
 "
+" fomatting markdown
+" visually highlight and press `gq` to format
 "
-"
-"
-" Colors
-"
-"
-"
-" colorscheme one
-" set background=light
-"
-" @see https://github.com/ajmwagar/vim-deus
-" colorscheme deus
-"
-" @see https://github.com/joshdick/onedark.vim#customizing-onedarkvims-look-without-forking-the-repository
-" if (has("autocmd") && !has("gui_running"))
-"   let s:white = { "gui": "#ABB2BF", "cterm": "145", "cterm16" : "7" }
-"   autocmd ColorScheme * call onedark#set_highlight("Normal", { "fg": s:white }) " No `bg` setting
-" end
-colorscheme nord
-set background=dark
+au BufRead,BufNewFile *.md setlocal textwidth=80
 
+"
+" colors
+"
+" colorscheme nord
+" set background=dark
+colorscheme one
+set background=light
 set noshowmode
 set guioptions=gm
+
+"
 " Syntax
+"
 syntax enable
 " Allow JSX in normal JS files
 let g:jsx_ext_required = 0
-" Reduce delay of ESC switching out of Insert mode (terminal Vim)
-set timeoutlen=1000 ttimeoutlen=0
-" If you visually select something and hit paste
-" that thing gets yanked into your buffer. This
-" generally is annoying when you're copying one item
-" and repeatedly pasting it. This changes the paste
-" command in visual mode so that it doesn't overwrite
-" whatever is in your paste buffer."
-vnoremap p "_dP
-" Always use system clipboard instead of +/* registers
-set clipboard=unnamed
 
 "
-"
-"
-" MOVEMENT
-"
-"
+" movement
 "
 " 0 goes to first character in line
 nnoremap 0 ^
@@ -196,3 +149,14 @@ nnoremap tk  :tabprev<CR>
 nnoremap tl  :tablast<CR>
 nnoremap tn  :tabnew<CR>
 nnoremap tm  :tabm<CR>
+" Reduce delay of ESC switching out of Insert mode (terminal Vim)
+set timeoutlen=1000 ttimeoutlen=0
+" If you visually select something and hit paste
+" that thing gets yanked into your buffer. This
+" generally is annoying when you're copying one item
+" and repeatedly pasting it. This changes the paste
+" command in visual mode so that it doesn't overwrite
+" whatever is in your paste buffer."
+vnoremap p "_dP
+" Always use system clipboard instead of +/* registers
+set clipboard=unnamed
