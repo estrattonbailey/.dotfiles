@@ -121,30 +121,57 @@ custom_cursor_colors: false
 #     white: '0xECEFF4'
 
 # Colors (One Half Light)
+# colors:
+#   primary:
+#     background: '0xfafafa'
+#     foreground: '0x383a42'
+
+#   normal:
+#     black: '0x383a42'
+#     red: '0xe45649'
+#     green: '0x50a14f'
+#     yellow: '0xc18401'
+#     blue: '0x0184bc'
+#     magenta: '0xa626a4'
+#     cyan: '0x0997b3'
+#     white: '0xfafafa'
+
+#   bright:
+#     black: '0x383a42'
+#     red: '0xe45649'
+#     green: '0x50a14f'
+#     yellow: '0xc18401'
+#     blue: '0x0184bc'
+#     magenta: '0xa626a4'
+#     cyan: '0x0997b3'
+#     white: '0xfafafa'
+
+# Colors (Pencil Light)
 colors:
-  primary:
-    background: '0xfafafa'
-    foreground: '0x383a42'
-
-  normal:
-    black: '0x383a42'
-    red: '0xe45649'
-    green: '0x50a14f'
-    yellow: '0xc18401'
-    blue: '0x0184bc'
-    magenta: '0xa626a4'
-    cyan: '0x0997b3'
-    white: '0xfafafa'
-
-  bright:
-    black: '0x383a42'
-    red: '0xe45649'
-    green: '0x50a14f'
-    yellow: '0xc18401'
-    blue: '0x0184bc'
-    magenta: '0xa626a4'
-    cyan: '0x0997b3'
-    white: '0xfafafa'
+ # Default Colors
+ primary:
+   background: '0xf1f1f1'
+   foreground: '0x424242'
+ # Normal colors
+ normal:
+   black:   '0x212121'
+   red:     '0xc30771'
+   green:   '0x10a778'
+   yellow:  '0xa89c14'
+   blue:    '0x008ec4'
+   magenta: '0x523c79'
+   cyan:    '0x20a5ba'
+   white:   '0xe0e0e0'
+ # Bright colors
+ bright:
+   black:   '0x212121'
+   red:     '0xfb007a'
+   green:   '0x5fd7af'
+   yellow:  '0xf3e430'
+   blue:    '0x20bbfc'
+   magenta: '0x6855de'
+   cyan:    '0x4fb8cc'
+   white:   '0xfafafa' # lighter than supplied by pencil
 
 # # Colors (Tomorrow Night Bright)
 # colors:

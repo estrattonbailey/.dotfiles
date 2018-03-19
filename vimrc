@@ -4,6 +4,8 @@
 call plug#begin('~/.dotfiles/vim/plugged')
 Plug 'arcticicestudio/nord-vim'
 Plug 'rakr/vim-one'
+Plug 'altercation/vim-colors-solarized'
+Plug 'reedes/vim-colors-pencil'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -109,21 +111,25 @@ set sidescroll=1
 au BufRead,BufNewFile *.md setlocal textwidth=80
 
 "
-" colors
-"
-" colorscheme nord
-" set background=dark
-colorscheme one
-set background=light
-set noshowmode
-set guioptions=gm
-
-"
 " Syntax
 "
 syntax enable
 " Allow JSX in normal JS files
 let g:jsx_ext_required = 0
+
+"
+" colors
+"
+set noshowmode
+set guioptions=gm
+set background=light
+colorscheme pencil
+" set background=light
+" colorscheme solarized
+" colorscheme nord
+" set background=dark
+" colorscheme one
+" set background=light
 
 "
 " movement
