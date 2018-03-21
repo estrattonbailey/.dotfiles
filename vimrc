@@ -109,6 +109,7 @@ set sidescroll=1
 " visually highlight and press `gq` to format
 "
 au BufRead,BufNewFile *.md setlocal textwidth=80
+au BufRead,BufNewFile *.twig setlocal syntax=liquid
 
 "
 " Syntax
