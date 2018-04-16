@@ -119,6 +119,13 @@ syntax enable
 let g:jsx_ext_required = 0
 
 "
+" FZF
+"
+" @see https://github.com/junegunn/fzf/issues/383
+"
+nnoremap <c-p> :GFiles<cr>
+
+"
 " colors
 "
 set noshowmode
