@@ -125,6 +125,7 @@
   excludesfile = ~/.gitignore_global
   editor = vim
   filemode = false
+  ignorecase = false
 [advice]
   statusHints = false
 [diff]
