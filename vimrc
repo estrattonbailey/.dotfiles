@@ -126,18 +126,20 @@ let g:jsx_ext_required = 0
 nnoremap <c-p> :GFiles<cr>
 
 "
+" nord options
+"
+let g:nord_italic = 1
+let g:nord_underline = 1
+
+"
 " colors
 "
-set noshowmode
 set guioptions=gm
-set background=light
-colorscheme pencil
-" set background=light
+colorscheme nord
+" set background = dark
+" colorscheme pencil
 " colorscheme solarized
-" colorscheme nord
-" set background=dark
 " colorscheme one
-" set background=light
 
 "
 " movement
