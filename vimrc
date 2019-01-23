@@ -11,7 +11,8 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
 Plug 'elzr/vim-json'
-Plug 'mxw/vim-jsx'
+" Plug 'mxw/vim-jsx'
+Plug 'chemzqm/vim-jsx-improve'
 Plug 'tpope/vim-liquid'
 Plug 'pangloss/vim-javascript'
 Plug 'alexlafroscia/postcss-syntax.vim'
@@ -126,18 +127,14 @@ let g:jsx_ext_required = 0
 nnoremap <c-p> :GFiles<cr>
 
 "
-" nord options
-"
-let g:nord_italic = 1
-let g:nord_underline = 1
-
-"
 " colors
 "
 set guioptions=gm
-colorscheme nord
-" set background = dark
-" colorscheme pencil
+set background=dark
+colorscheme pencil
+let g:pencil_higher_contrast_ui = 1
+
+" colorscheme nord
 " colorscheme solarized
 " colorscheme one
 
