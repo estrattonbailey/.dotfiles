@@ -173,7 +173,7 @@ colors:
     cyan:    '0x20a5ba'
     white:   '0xe0e0e0'
   bright:
-    black:   '0x414141'
+    black:   '0x616161'
     red:     '0xfb007a'
     green:   '0x5fd7af'
     yellow:  '0xf3e430'
