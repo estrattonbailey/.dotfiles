@@ -54,6 +54,7 @@ vim +PlugInstall +qa
 ```
 
 **5.1** For Tern, you'll need to `cd` into `~/.dotfiles/vim/plugged/tern_for_vim` and run `npm install` for that to run.
+**5.1** For ack, you'll need to `brew install ack`.
 
 6. Use it:
 ```bash

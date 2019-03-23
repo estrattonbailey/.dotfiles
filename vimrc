@@ -16,6 +16,7 @@ Plug 'chemzqm/vim-jsx-improve'
 Plug 'tpope/vim-liquid'
 Plug 'pangloss/vim-javascript'
 Plug 'alexlafroscia/postcss-syntax.vim'
+Plug 'mileszs/ack.vim'
 call plug#end()
 
 "
