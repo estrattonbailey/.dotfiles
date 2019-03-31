@@ -130,10 +130,12 @@ nnoremap <c-p> :GFiles<cr>
 "
 " colors
 "
-set guioptions=gm
-set background=dark
+" set guioptions=gm
+set background=light
 colorscheme pencil
-let g:pencil_higher_contrast_ui = 1
+
+" for dark bg
+" let g:pencil_higher_contrast_ui = 1
 
 " colorscheme nord
 " colorscheme solarized
