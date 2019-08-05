@@ -2,6 +2,7 @@
 " plugins
 "
 call plug#begin('~/.dotfiles/vim/plugged')
+Plug 'othree/html5.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'rakr/vim-one'
 Plug 'altercation/vim-colors-solarized'
@@ -130,11 +131,9 @@ nnoremap <c-p> :GFiles<cr>
 "
 " colors
 "
-" set guioptions=gm
-set background=light
-colorscheme pencil
-
-" for dark bg
+colorscheme nord
+" set background=light
+" set background=dark
 " let g:pencil_higher_contrast_ui = 1
 
 " colorscheme nord
