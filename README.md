@@ -36,6 +36,8 @@ cp -r target/release/osx/Alacritty.app /Applications/
 ln -s ~/.dotfiles/vimrc ~/.vimrc
 ln -s ~/.dotfiles/gitconfig ~/.gitconfig
 ln -s ~/.dotfiles/gitignore_global ~/.gitignore_global
+ln -s ~/.dotfiles/bashrc ~/.bashrc # might need to delete or copy the old one
+ln -s ~/.dotfiles/bash_profile ~/.bash_profile # might need to delete or copy the old one
 # remove the installed config and symlink this one
 rm ~/.config/alacritty/alacritty.yml && ln -s ~/.dotfiles/alacritty.yml ~/.config/alacritty/alacritty.yml
 ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
