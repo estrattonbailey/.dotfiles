@@ -69,8 +69,7 @@
   # pull --rebase
   got = pull --rebase origin master
   go = push origin master
-  gotd = pull --rebase origin develop
-  god = push origin develop
+  fresh = !git fetch --all && git checkout --no-track -b $1 origin/master && :
 
   # remote
   r = remote -v                     # show remotes (verbose)
