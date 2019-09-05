@@ -18,6 +18,11 @@ Plug 'tpope/vim-liquid'
 Plug 'pangloss/vim-javascript'
 Plug 'alexlafroscia/postcss-syntax.vim'
 Plug 'mileszs/ack.vim'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'jason0x43/vim-js-indent'
+Plug 'Quramy/vim-js-pretty-template'
+Plug 'styled-components/vim-styled-components'
+Plug 'ludovicchabant/vim-gutentags'
 call plug#end()
 
 "
@@ -107,6 +112,13 @@ set scrolloff=8
 set sidescrolloff=15
 set sidescroll=1
 
+set suffixesadd=.js,.jsx,.json,.ts,.tsx,.scss,.css
+set includeexpr=substitute(v:fname,'@/',getcwd().'/','')
+set path+=$PWD/node_modules
+
+" let g:gutentags_trace = 1
+let g:gutentags_ctags_exclude = [".git", "node_modules"]
+
 "
 " fomatting markdown
 " visually highlight and press `gq` to format
@@ -121,6 +133,25 @@ syntax enable
 " Allow JSX in normal JS files
 let g:jsx_ext_required = 0
 
+"
+" Completion
+"
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+
+"
+" Template literals
+"
+" Register tag name associated the filetype
+call jspretmpl#register_tag('html', 'html')
+call jspretmpl#register_tag('h', 'html')
+call jspretmpl#register_tag('css', 'css')
+call jspretmpl#register_tag('styled', 'css')
+
+autocmd FileType javascript JsPreTmpl
+autocmd FileType javascript.jsx JsPreTmpl
+autocmd FileType typescript JsPreTmpl
+autocmd FileType typescript syn clear foldBraces " For leafgarland/typescript-vim users only. Please see #1 for details.
 "
 " FZF
 "
