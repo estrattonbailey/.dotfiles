@@ -50,6 +50,13 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
+5. Install `ctags`
+Head to the [universal-ctags](https://github.com/universal-ctags/ctags) homepage
+and install using Homebrew. As of writing this looks like:
+```bash
+brew install --HEAD universal-ctags/universal-ctags/universal-ctags
+```
+
 5. Install plugins:
 ```bash
 vim +PlugInstall +qa
