@@ -10,22 +10,22 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-liquid'
 Plug 'ludovicchabant/vim-gutentags'
 " Plug 'dense-analysis/ale'
-Plug 'Quramy/tsuquyomi'
 
 "
 " Syntaxes
 "
 Plug 'chr4/nginx.vim'
+Plug 'tpope/vim-liquid'
 Plug 'othree/html5.vim'
 Plug 'alexlafroscia/postcss-syntax.vim'
-" Plug 'elzr/vim-json'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'Quramy/vim-js-pretty-template'
 Plug 'styled-components/vim-styled-components'
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
 Plug 'MaxMEllon/vim-jsx-pretty'
-Plug 'jason0x43/vim-js-indent'
 call plug#end()
 
 "
@@ -154,6 +154,8 @@ au BufRead,BufNewFile *.twig setlocal syntax=liquid
 syntax enable
 " Allow JSX in normal JS files
 let g:jsx_ext_required = 0
+autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
+autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx
 
 " https://vi.stackexchange.com/a/5318
 let g:matchparen_timeout = 20
@@ -172,11 +174,11 @@ set omnifunc=syntaxcomplete#Complete
 call jspretmpl#register_tag('html', 'html')
 call jspretmpl#register_tag('h', 'html')
 call jspretmpl#register_tag('css', 'css')
-call jspretmpl#register_tag('styled', 'css')
 
 autocmd FileType javascript JsPreTmpl
-autocmd FileType javascript.jsx JsPreTmpl
 autocmd FileType typescript JsPreTmpl
+autocmd FileType typescript syn clear foldBraces " For leafgarland/typescript-vim users only. Please see #1 for details.
+
 "
 " FZF
 "
