@@ -2,27 +2,30 @@
 " plugins
 "
 call plug#begin('~/.dotfiles/vim/plugged')
-Plug 'othree/html5.vim'
 Plug 'arcticicestudio/nord-vim'
-Plug 'rakr/vim-one'
-Plug 'altercation/vim-colors-solarized'
+" Plug 'rakr/vim-one'
+" Plug 'altercation/vim-colors-solarized'
 Plug 'reedes/vim-colors-pencil'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
-Plug 'elzr/vim-json'
-" Plug 'mxw/vim-jsx'
-Plug 'chemzqm/vim-jsx-improve'
 Plug 'tpope/vim-liquid'
-Plug 'pangloss/vim-javascript'
+Plug 'ludovicchabant/vim-gutentags'
+" Plug 'dense-analysis/ale'
+Plug 'Quramy/tsuquyomi'
+
+"
+" Syntaxes
+"
+Plug 'chr4/nginx.vim'
+Plug 'othree/html5.vim'
 Plug 'alexlafroscia/postcss-syntax.vim'
-Plug 'mileszs/ack.vim'
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'jason0x43/vim-js-indent'
+" Plug 'elzr/vim-json'
 Plug 'Quramy/vim-js-pretty-template'
 Plug 'styled-components/vim-styled-components'
-Plug 'ludovicchabant/vim-gutentags'
+Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'jason0x43/vim-js-indent'
 call plug#end()
 
 "
@@ -120,6 +123,25 @@ set path+=$PWD/node_modules
 let g:gutentags_ctags_exclude = [".git", "node_modules"]
 
 "
+" ALE
+" @see https://github.com/dense-analysis/ale
+" @see https://www.vimfromscratch.com/articles/setting-up-vim-for-typescript/
+"
+" let g:ale_cache_executable_check_failures = 1
+" let g:ale_linters = {
+" \   'javascript': ['eslint'],
+" \   'typescript': ['eslint']
+" \}
+" let g:ale_fixers = {
+" \   'javascript': ['eslint'],
+" \   'typescript': ['eslint'],
+" \   'scss': ['prettier'],
+" \   'css': ['prettier'],
+" \   'html': ['prettier']
+" \}
+" let g:ale_fix_on_save = 1
+
+"
 " fomatting markdown
 " visually highlight and press `gq` to format
 "
@@ -132,6 +154,10 @@ au BufRead,BufNewFile *.twig setlocal syntax=liquid
 syntax enable
 " Allow JSX in normal JS files
 let g:jsx_ext_required = 0
+
+" https://vi.stackexchange.com/a/5318
+let g:matchparen_timeout = 20
+let g:matchparen_insert_timeout = 20
 
 "
 " Completion
@@ -151,7 +177,6 @@ call jspretmpl#register_tag('styled', 'css')
 autocmd FileType javascript JsPreTmpl
 autocmd FileType javascript.jsx JsPreTmpl
 autocmd FileType typescript JsPreTmpl
-autocmd FileType typescript syn clear foldBraces " For leafgarland/typescript-vim users only. Please see #1 for details.
 "
 " FZF
 "
