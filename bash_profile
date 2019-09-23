@@ -1,5 +1,9 @@
-source ~/.bash_env.sh
-source ~/.bash_local
+if test -f "~/.bash_env.sh"; then
+  source ~/.bash_env.sh
+fi
+if test -f "~/.bash_local"; then
+  source ~/.bash_local
+fi
 
 alias ls='ls -la'
 alias ll="ls -la"

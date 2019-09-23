@@ -31,7 +31,8 @@ call plug#end()
 "
 " leader
 "
-let mapleader=","
+let mapleader=" "
+nnoremap <Leader>w <C-w>
 
 "
 " basic
