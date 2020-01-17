@@ -148,6 +148,8 @@ let g:gutentags_ctags_exclude = [".git", "node_modules"]
 au BufRead,BufNewFile *.md setlocal textwidth=80
 au BufRead,BufNewFile *.twig setlocal syntax=liquid
 
+nnoremap gp :silent %!prettier --stdin --stdin-filepath %<CR>
+
 "
 " Syntax
 "
@@ -166,6 +168,9 @@ let g:matchparen_insert_timeout = 20
 "
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
+" Improve omnicomplete
+set completeopt=longest,menuone
+autocmd FileType * let b:coc_suggest_disable = 1
 
 "
 " Template literals
