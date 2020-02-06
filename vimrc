@@ -10,8 +10,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
-Plug 'ludovicchabant/vim-gutentags'
-" Plug 'dense-analysis/ale'
 
 "
 " Syntaxes
@@ -120,7 +118,7 @@ set includeexpr=substitute(v:fname,'@/',getcwd().'/','')
 set path+=$PWD/node_modules
 
 " let g:gutentags_trace = 1
-let g:gutentags_ctags_exclude = [".git", "node_modules"]
+" let g:gutentags_ctags_exclude = [".git", "node_modules"]
 
 "
 " ALE
@@ -170,7 +168,9 @@ filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 " Improve omnicomplete
 set completeopt=longest,menuone
-autocmd FileType * let b:coc_suggest_disable = 1
+" autocmd FileType * let b:coc_suggest_disable = 1
+source ~/.dotfiles/coc.vimrc
+
 
 "
 " Template literals
