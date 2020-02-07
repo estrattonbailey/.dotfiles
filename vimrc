@@ -7,9 +7,11 @@ Plug 'arcticicestudio/nord-vim'
 " Plug 'altercation/vim-colors-solarized'
 Plug 'reedes/vim-colors-pencil'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
+Plug 'itchyny/lightline.vim'
 
 "
 " Syntaxes
@@ -168,7 +170,7 @@ filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 " Improve omnicomplete
 set completeopt=longest,menuone
-" autocmd FileType * let b:coc_suggest_disable = 1
+autocmd FileType * let b:coc_suggest_disable = 1
 source ~/.dotfiles/coc.vimrc
 
 
@@ -202,6 +204,20 @@ colorscheme nord
 " colorscheme nord
 " colorscheme solarized
 " colorscheme one
+let g:lightline = {
+	\ 'colorscheme': 'nord',
+	\ 'active': {
+	\   'left': [ [ 'mode', 'paste' ],
+	\             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
+	\ },
+  \ 'component': {
+  \   'filename': '%F',
+  \ },
+	\ 'component_function': {
+	\   'cocstatus': 'coc#status'
+	\ },
+	\ }
+
 
 "
 " movement
