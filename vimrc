@@ -3,8 +3,6 @@
 "
 call plug#begin('~/.dotfiles/vim/plugged')
 Plug 'arcticicestudio/nord-vim'
-" Plug 'rakr/vim-one'
-" Plug 'altercation/vim-colors-solarized'
 Plug 'reedes/vim-colors-pencil'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
@@ -119,28 +117,6 @@ set suffixesadd=.js,.jsx,.json,.ts,.tsx,.scss,.css
 set includeexpr=substitute(v:fname,'@/',getcwd().'/','')
 set path+=$PWD/node_modules
 
-" let g:gutentags_trace = 1
-" let g:gutentags_ctags_exclude = [".git", "node_modules"]
-
-"
-" ALE
-" @see https://github.com/dense-analysis/ale
-" @see https://www.vimfromscratch.com/articles/setting-up-vim-for-typescript/
-"
-" let g:ale_cache_executable_check_failures = 1
-" let g:ale_linters = {
-" \   'javascript': ['eslint'],
-" \   'typescript': ['eslint']
-" \}
-" let g:ale_fixers = {
-" \   'javascript': ['eslint'],
-" \   'typescript': ['eslint'],
-" \   'scss': ['prettier'],
-" \   'css': ['prettier'],
-" \   'html': ['prettier']
-" \}
-" let g:ale_fix_on_save = 1
-
 "
 " fomatting markdown
 " visually highlight and press `gq` to format
@@ -170,7 +146,7 @@ filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 " Improve omnicomplete
 set completeopt=longest,menuone
-autocmd FileType * let b:coc_suggest_disable = 1
+" autocmd FileType * let b:coc_suggest_disable = 1
 source ~/.dotfiles/coc.vimrc
 
 
@@ -197,13 +173,6 @@ nnoremap <c-p> :GFiles<cr>
 " colors
 "
 colorscheme nord
-" set background=light
-" set background=dark
-" let g:pencil_higher_contrast_ui = 1
-
-" colorscheme nord
-" colorscheme solarized
-" colorscheme one
 let g:lightline = {
 	\ 'colorscheme': 'nord',
 	\ 'active': {
