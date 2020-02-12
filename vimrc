@@ -16,15 +16,11 @@ Plug 'itchyny/lightline.vim'
 "
 Plug 'chr4/nginx.vim'
 Plug 'tpope/vim-liquid'
-Plug 'othree/html5.vim'
-Plug 'alexlafroscia/postcss-syntax.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'Quramy/vim-js-pretty-template'
-Plug 'styled-components/vim-styled-components'
-Plug 'pangloss/vim-javascript'
-Plug 'leafgarland/typescript-vim'
-Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
+
+let g:typescript_indent_disable = 1
 
 "
 " leader
@@ -147,19 +143,6 @@ set omnifunc=syntaxcomplete#Complete
 " Improve omnicomplete
 set completeopt=longest,menuone
 source ~/.dotfiles/coc.vimrc
-
-
-"
-" Template literals
-"
-" Register tag name associated the filetype
-call jspretmpl#register_tag('html', 'html')
-call jspretmpl#register_tag('h', 'html')
-call jspretmpl#register_tag('css', 'css')
-
-autocmd FileType javascript JsPreTmpl
-autocmd FileType typescript JsPreTmpl
-autocmd FileType typescript syn clear foldBraces " For leafgarland/typescript-vim users only. Please see #1 for details.
 
 "
 " FZF
