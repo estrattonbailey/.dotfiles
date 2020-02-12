@@ -146,7 +146,6 @@ filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 " Improve omnicomplete
 set completeopt=longest,menuone
-" autocmd FileType * let b:coc_suggest_disable = 1
 source ~/.dotfiles/coc.vimrc
 
 

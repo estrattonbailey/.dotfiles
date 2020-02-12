@@ -41,6 +41,7 @@ ln -s ~/.dotfiles/bash_profile ~/.bash_profile # might need to delete or copy th
 # remove the installed config and symlink this one
 rm ~/.config/alacritty/alacritty.yml && ln -s ~/.dotfiles/alacritty.yml ~/.config/alacritty/alacritty.yml
 ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
+ln -s ~/.dotfiles/coc-settings.json ~/.vim/coc-settings.json
 ```
 
 4. Install Vim Plug:
