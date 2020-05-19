@@ -120,7 +120,7 @@ set path+=$PWD/node_modules
 au BufRead,BufNewFile *.md setlocal textwidth=80
 au BufRead,BufNewFile *.twig setlocal syntax=liquid
 
-nnoremap gp :silent %!prettier --stdin --stdin-filepath %<CR>
+nnoremap gp :silent %!./node_modules/.bin/prettier --stdin --stdin-filepath %<CR>
 
 "
 " Syntax

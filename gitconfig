@@ -28,6 +28,7 @@
 
   # branch
   b = branch -v                     # branch (verbose)
+  branch-name = "!git rev-parse --abbrev-ref HEAD"
 
   # commit
   c = commit -m                     # commit with message
@@ -67,8 +68,8 @@
   rs = rebase --skip                # skip rebase
 
   # pull --rebase
-  got = pull --rebase origin master
-  go = push origin master
+  got = "!git pull --rebase origin $(git branch-name)"
+  go = "!git push origin $(git branch-name)"
   fresh = !git fetch --all && git checkout --no-track -b $1 origin/master && :
 
   # remote
