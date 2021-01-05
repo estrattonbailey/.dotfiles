@@ -40,6 +40,8 @@ ln -s ~/.dotfiles/coc-settings.json ~/.vim/coc-settings.json
 vim +PlugInstall +qa
 ```
 
+6. Install CoC plugins i.e. `:CocInstall`
+
 6. Use it:
 ```bash
 vim <filename>

@@ -1,3 +1,7 @@
 {
-  "suggest.autoTrigger": "trigger"
+  "suggest.autoTrigger": "trigger",
+  "python": {
+    "venvPath": "/Users/ericbailey/.pyenv/versions/3.6.8/envs",
+    "venv": "cyber"
+  }
 }
