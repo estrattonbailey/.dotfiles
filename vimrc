@@ -11,6 +11,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
 Plug 'itchyny/lightline.vim'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'benmills/vimux'
+Plug 'szw/vim-maximizer'
 
 "
 " Syntaxes
@@ -26,7 +28,8 @@ let g:typescript_indent_disable = 1
 "
 " leader
 "
-let mapleader=","
+nnoremap <SPACE> <Nop>
+let mapleader=" "
 
 "
 " basic
@@ -143,6 +146,10 @@ filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 " Improve omnicomplete
 set completeopt=longest,menuone
+
+"
+" COC configs
+"
 source ~/.dotfiles/coc.vimrc
 
 "
@@ -151,6 +158,17 @@ source ~/.dotfiles/coc.vimrc
 " @see https://github.com/junegunn/fzf/issues/383
 "
 nnoremap <c-p> :GFiles<cr>
+
+"
+" Vimux
+"
+map <Leader>vp :VimuxPromptCommand<CR>
+map <Leader>vl :VimuxRunLastCommand<CR>
+
+"
+" Maximizer
+"
+nnoremap <silent>mm :MaximizerToggle<CR>
 
 "
 " colors
