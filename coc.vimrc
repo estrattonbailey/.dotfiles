@@ -126,3 +126,5 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+" Restart python server
+nnoremap <silent> <space>rp  :<C-u>CocCommand pyright.restartserver<CR>
