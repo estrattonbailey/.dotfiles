@@ -134,6 +134,8 @@ syntax enable
 let g:jsx_ext_required = 0
 autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
 autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx
+" https://github.com/vim-python/python-syntax#option-variables
+let g:python_highlight_all = 1
 
 " https://vi.stackexchange.com/a/5318
 let g:matchparen_timeout = 20
