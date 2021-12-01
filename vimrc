@@ -13,6 +13,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'benmills/vimux'
 Plug 'szw/vim-maximizer'
+Plug 'puremourning/vimspector'
 
 "
 " Syntaxes

@@ -70,7 +70,7 @@
   # pull --rebase
   got = "!git pull --rebase origin $(git branch-name)"
   go = "!git push origin $(git branch-name)"
-  fresh = !git fetch --all && git checkout --no-track -b $1 origin/master && :
+  fresh = !git fetch --all && git checkout --no-track -b $1 origin/$2 && :
 
   # remote
   r = remote -v                     # show remotes (verbose)
@@ -153,3 +153,5 @@
   clean = git lfs clean %f
   smudge = git lfs smudge %f
   required = true
+[init]
+	defaultBranch = main
