@@ -20,3 +20,5 @@ export DD_TRACE_STARTUP_LOGS=0
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
+
+export PATH="$HOME/.poetry/bin:$PATH"
