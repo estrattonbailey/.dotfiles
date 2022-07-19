@@ -11,9 +11,10 @@ Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
 Plug 'itchyny/lightline.vim'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'benmills/vimux'
+" Plug 'benmills/vimux'
 Plug 'szw/vim-maximizer'
 Plug 'puremourning/vimspector'
+Plug 'mtth/scratch.vim'
 
 "
 " Syntaxes
@@ -172,6 +173,13 @@ map <Leader>vl :VimuxRunLastCommand<CR>
 " Maximizer
 "
 nnoremap <silent>mm :MaximizerToggle<CR>
+
+"
+" Scratch
+"
+nnoremap <silent>tt :Scratch<CR>
+let g:scratch_persistence_file = '~/.dotfiles/scratch'
+let g:scratch_autohide = 0
 
 "
 " colors
