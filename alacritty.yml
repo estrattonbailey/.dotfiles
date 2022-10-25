@@ -13,6 +13,8 @@ env:
   TERM: xterm-256color
 
 window:
+  opacity: 1.0
+
   # Window dimensions (changes require restart)
   #
   # Specified in number of columns/lines, not pixels.
@@ -77,7 +79,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux) monospace
     #   - (Windows) Consolas
-    #family: monospace
+    family: JetBrainsMono NF
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -261,12 +263,6 @@ bell:
   duration: 0
   color: '0xffffff'
 
-# Background opacity
-#
-# Window opacity as a floating point number from `0.0` to `1.0`.
-# The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 1.0
-
 # Mouse bindings
 #
 # Available fields:
@@ -296,24 +292,6 @@ mouse:
 
   # If this is `true`, the cursor is temporarily hidden when typing.
   hide_when_typing: false
-
-  url:
-    # URL launcher
-    #
-    # This program is executed when clicking on a text which is recognized as a URL.
-    # The URL is always added to the command as the last parameter.
-    #
-    # Default:
-    #   - (macOS) open
-    #   - (Linux) xdg-open
-    #   - (Windows) explorer
-    #launcher: xdg-open
-
-    # URL modifiers
-    #
-    # These are the modifiers that need to be held down for opening URLs when clicking
-    # on them. The available modifiers are documented in the key binding section.
-    modifiers: None
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
@@ -347,7 +325,7 @@ live_config_reload: true
 #   - (Windows) powershell
 shell:
   program: login
-  args: ["-fp", "ericbailey"]
+  args: ["-fp", "estrattonbailey"]
 
 # Windows 10 ConPTY backend (Windows only)
 #
