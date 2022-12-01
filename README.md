@@ -31,6 +31,9 @@ ln -s ~/.dotfiles/alacritty.yml ~/.alacritty.yml
 
 ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
 ln -s ~/.dotfiles/coc-settings.json ~/.vim/coc-settings.json
+
+# nvim
+ln -s ~/.dotfiles/init.vim ~/.config/nvim/init.vim
 ```
 
 4. Install [Vim Plug](https://github.com/junegunn/vim-plug)
@@ -44,11 +47,11 @@ vim +PlugInstall +qa
 
 6. Use it:
 ```bash
-vim <filename>
+nvim <filename>
 ```
 
 ## tmux
-Notable changes:
+Install with brew. Notable changes:
 - uses `C-a` as prefix
 - uses pane splitting shortcuts similar to vim
 *See `tmux.conf` for these, there's only a few overrides.*
