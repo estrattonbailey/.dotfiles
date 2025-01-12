@@ -2,11 +2,18 @@
 node_modules
 *.log
 *.map
-tags
-tags.lock
-tags.temp
 .rpt2_cache/
 .rts2_cache_cjs/
 .rts2_cache_es/
 .rts2_cache_umd/
 pyrightconfig.json
+scripty-*
+
+# For social-app repo
+Gemfile.lock
+
+# local vim settings
+.vim
+
+# https://github.com/bluesky-social/social-app/pull/7008
+.ruby-version

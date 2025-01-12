@@ -9,7 +9,7 @@ git clone git@github.com:estrattonbailey/.dotfiles.git ~/.dotfiles
 
 2. Install or update vim. I use homebrew.
 
-3. Install Alacritty
+3. Install Kitty (or Alacritty)
 
 3. Create symlinks:
 
@@ -28,6 +28,10 @@ ln -s ~/.dotfiles/bash_profile ~/.bash_profile # might need to delete or copy th
 
 # remove the installed config and symlink this one
 ln -s ~/.dotfiles/alacritty.yml ~/.alacritty.yml
+
+# kitty
+mkdir -p ~/.config/kitty
+ln -s ~/.dotfiles/kitty.conf ~/.config/kitty/kitty.conf
 
 ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
 ln -s ~/.dotfiles/coc-settings.json ~/.vim/coc-settings.json

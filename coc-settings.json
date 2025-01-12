@@ -1,5 +1,6 @@
 {
   "suggest.autoTrigger": "trigger",
   "python.linting.mypyEnabled": true,
-  "pyright.organizeimports.provider": "isort"
+  "pyright.organizeimports.provider": "isort",
+  "list.height": 20
 }

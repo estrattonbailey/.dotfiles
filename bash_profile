@@ -12,3 +12,6 @@ export PATH="/usr/local/opt/postgresql@10/bin:$PATH"
 
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 . "$HOME/.cargo/env"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+export PATH=$PATH:$HOME/.maestro/bin

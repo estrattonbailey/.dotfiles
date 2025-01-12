@@ -1,8 +1,13 @@
+require("tokyonight").setup({
+	transparent = true,
+})
+
+vim.cmd([[
 "
 " plugins
 "
 call plug#begin('~/.dotfiles/vim/plugged')
-" Plug 'arcticicestudio/nord-vim'
+Plug 'arcticicestudio/nord-vim'
 Plug 'folke/tokyonight.nvim'
 Plug 'reedes/vim-colors-pencil'
 Plug 'tpope/vim-fugitive'
@@ -130,7 +135,7 @@ set path+=$PWD/node_modules
 au BufRead,BufNewFile *.md setlocal textwidth=80
 au BufRead,BufNewFile *.twig setlocal syntax=liquid
 
-nnoremap gp :silent %!./node_modules/.bin/prettier --stdin-filepath %<CR>
+nnoremap gp :silent %!./node_modules/.bin/prettier --stdin --stdin-filepath %<CR>
 
 "
 " Syntax
@@ -194,9 +199,8 @@ colorscheme tokyonight-night
 " colorscheme tokyonight-storm
 " colorscheme tokyonight-day
 " colorscheme tokyonight-moon
-
 let g:lightline = {
-	\ 'colorscheme': 'tokyonight',
+	\ 'colorscheme': 'tokyonight-night',
 	\ 'active': {
 	\   'left': [ [ 'mode', 'paste' ],
 	\             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
@@ -245,3 +249,4 @@ set timeoutlen=1000 ttimeoutlen=0
 vnoremap p "_dP
 " Always use system clipboard instead of +/* registers
 set clipboard=unnamed
+]])
