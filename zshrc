@@ -46,3 +46,9 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
 
 export POETRY_HOME=$HOME/.local/bin/poetry
 export PATH=$POETRY_HOME:$PATH
+
+# https://github.com/Homebrew/homebrew-core/issues/181152#issuecomment-2288394066
+export TMPDIR=/tmp
+
+# fastlane
+export PATH=/usr/local/bin/fastlane:$PATH
