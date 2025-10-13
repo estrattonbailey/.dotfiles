@@ -17,3 +17,5 @@ Gemfile.lock
 
 # https://github.com/bluesky-social/social-app/pull/7008
 .ruby-version
+
+.claude
