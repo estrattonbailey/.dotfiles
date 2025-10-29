@@ -1,0 +1,19 @@
+[[language]]
+name = "html"
+indent = { tab-width = 4, unit = "    " }
+[[language]]
+name = "css"
+indent = { tab-width = 4, unit = "    " }
+[[language]]
+name = "javascript"
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "typescript"
+language-servers = [ { name = "typescript-language-server", except-features = [ "format" ] } ]
+
+[[language]]
+name = "go"
+
+[[language]]
+name = "rust"

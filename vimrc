@@ -27,6 +27,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'prisma/vim-prisma'
 
 Plug 'github/copilot.vim'
+
+Plug 'folke/flash.nvim'
 call plug#end()
 
 let g:typescript_indent_disable = 1

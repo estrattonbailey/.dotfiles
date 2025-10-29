@@ -38,6 +38,9 @@ ln -s ~/.dotfiles/coc-settings.json ~/.vim/coc-settings.json
 
 # nvim
 ln -s ~/.dotfiles/init.vim ~/.config/nvim/init.vim
+
+# claude
+ln -s ~/.dotfiles/claude/commands ~/.claude
 ```
 
 4. Install [Vim Plug](https://github.com/junegunn/vim-plug)

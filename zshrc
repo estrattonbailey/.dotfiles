@@ -52,3 +52,6 @@ export TMPDIR=/tmp
 
 # fastlane
 export PATH=/usr/local/bin/fastlane:$PATH
+
+# go
+export PATH=$PATH:$HOME/go/bin
