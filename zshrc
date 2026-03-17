@@ -55,3 +55,21 @@ export PATH=/usr/local/bin/fastlane:$PATH
 
 # go
 export PATH=$PATH:$HOME/go/bin
+
+# Resolves issues with Ansible forking
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
+# asdf
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
+# added for Claude
+export PATH="$HOME/.local/bin:$PATH"
+
+watch_del() {
+  local value="$1"
+  if [[ "$value" == "atproto" ]]; then
+    watchman watch-del '~/Sites/bsky/atproto' ; watchman watch-project '~/Sites/bsky/atproto'
+  else
+	  watchman watch-del '~/Sites/bsky/app' ; watchman watch-project '~/Sites/bsky/app'
+  fi
+}

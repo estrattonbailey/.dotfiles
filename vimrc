@@ -4,6 +4,7 @@
 call plug#begin('~/.dotfiles/vim/plugged')
 " Plug 'arcticicestudio/nord-vim'
 Plug 'folke/tokyonight.nvim'
+Plug 'cormacrelf/dark-notify'
 Plug 'reedes/vim-colors-pencil'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
